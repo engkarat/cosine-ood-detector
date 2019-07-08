@@ -1,0 +1,67 @@
+# Out-of-Distribution Detection using Cosine Similarity Classifier
+
+This repository is an implementation regards to paper "Hyperparameter-Free Out-of-Distribution Detection Using Softmax of Scaled Cosine Similarity" [[arxiv]](https://arxiv.org/abs/1905.10628). Influenced by metrics learning, our classifier is built utilizing the cosine similarity with scaling factor. It allows our network to improve ability on out-of-distribution detection.
+
+## Datasets and Checkpoints
+
+Datasets and checkpoints used in this implementation can be downloaded at [datasets](https://drive.google.com/open?id=1DzeB5aT1BE4pSmm1nHolbnIx1PR4ZvXx) and [checkpoints](https://drive.google.com/open?id=12N33RP8G9CWrtAzBFocOZueRqbcMCD3F). For datasets, please extract and store all of them below *'data'* directory. For checkpoint, please put them below *'ckpt'* directory.
+
+## Requirements
+
+Please install required packages, using this command:
+
+~~~
+pip install -r requirements.txt
+~~~
+
+## Running the code
+
+### 1. Using pre-trained checkpoints
+
+To examine the out-of-distribution detection result using pre-trained network, checkpoints should be stored as described above. Then, run commands:
+
+__Standard Network__
+~~~
+# Standard DenseNet with CIFAR-10
+python std_ood_detector.py --nn dense-100 --tr_dset cifar10
+~~~
+
+~~~
+# Standard DenseNet with CIFAR-100
+python std_ood_detector.py --nn dense-100 --tr_dset cifar100
+~~~
+
+~~~
+# Standard WRN-28-10 with CIFAR-10
+python std_ood_detector.py --nn wrn-28-10 --tr_dset cifar10
+~~~
+
+~~~
+# Standard WRN-28-10 with CIFAR-100
+python std_ood_detector.py --nn wrn-28-10 --tr_dset cifar100
+~~~
+
+__Scaled Cosine Network__
+~~~
+# Scaled Cosine DenseNet with CIFAR-10
+python cosine_ood_detector.py --nn dense-100 --tr_dset cifar10
+~~~
+
+~~~
+# Scaled Cosine DenseNet with CIFAR-100
+python cosine_ood_detector.py --nn dense-100 --tr_dset cifar100
+~~~
+
+~~~
+# Scaled Cosine WRN-28-10 with CIFAR-10
+python cosine_ood_detector.py --nn wrn-28-10 --tr_dset cifar10
+~~~
+
+~~~
+# Scaled Cosine WRN-28-10 with CIFAR-100
+python cosine_ood_detector.py --nn wrn-28-10 --tr_dset cifar100
+~~~
+
+### 2. Training from scratch
+
+Network can also be trained from scratch. 
