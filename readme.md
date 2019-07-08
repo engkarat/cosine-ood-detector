@@ -1,7 +1,7 @@
 
 # Out-of-Distribution Detection using Scaled Cosine Similarity
 
-This repository is an implementation regards to paper __"Hyperparameter-Free Out-of-Distribution Detection Using Softmax of Scaled Cosine Similarity" [[arxiv]](https://arxiv.org/abs/1905.10628) by Engkarat Techapanurak and Prof. Okatani Takayuki__. Influenced by metrics learning, our classifier is built utilizing the cosine similarity with scaling factor. It allows our network to improve ability on out-of-distribution detection.
+This repository is an [PyTorch](https://pytorch.org/) implementation for to paper __"Hyperparameter-Free Out-of-Distribution Detection Using Softmax of Scaled Cosine Similarity" [[arxiv]](https://arxiv.org/abs/1905.10628) by Engkarat Techapanurak and Prof. Okatani Takayuki__. Influenced by metrics learning, our classifier is built utilizing the cosine similarity with scaling factor. It allows our network to improve ability on out-of-distribution detection.
 
 ## Datasets and Checkpoints
 
@@ -9,7 +9,7 @@ Datasets and checkpoints used in this implementation can be downloaded at [datas
 
 ## Requirements
 
-Please install required packages, using this command:
+According to the implementation in the code, **at least one GPU is required to run the experiment**. Please also install required packages, using this command:
 ~~~
 pip install -r requirements.txt
 ~~~
