@@ -22,10 +22,14 @@ Datasets and checkpoints used in this implementation can be downloaded at [datas
 
 ## Requirements
 
-According to the implementation in the code, **at least one GPU is required to run the experiment**. Please also install required packages, using this command:
+Please install required packages, using this command:
 ~~~
 pip install -r requirements.txt
 ~~~
+
+Other requirements:
+- GPU: at least 1 gpu
+- Python version: 2.7.15
 
 ## Running the code
 
