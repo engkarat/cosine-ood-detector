@@ -1,6 +1,7 @@
-# Out-of-Distribution Detection using Cosine Similarity Classifier
 
-This repository is an implementation regards to paper "Hyperparameter-Free Out-of-Distribution Detection Using Softmax of Scaled Cosine Similarity" [[arxiv]](https://arxiv.org/abs/1905.10628). Influenced by metrics learning, our classifier is built utilizing the cosine similarity with scaling factor. It allows our network to improve ability on out-of-distribution detection.
+# Out-of-Distribution Detection using Scaled Cosine Similarity
+
+This repository is an implementation regards to paper __"Hyperparameter-Free Out-of-Distribution Detection Using Softmax of Scaled Cosine Similarity" [[arxiv]](https://arxiv.org/abs/1905.10628) by Engkarat Techapanurak and Prof. Okatani Takayuki__. Influenced by metrics learning, our classifier is built utilizing the cosine similarity with scaling factor. It allows our network to improve ability on out-of-distribution detection.
 
 ## Datasets and Checkpoints
 
@@ -9,7 +10,6 @@ Datasets and checkpoints used in this implementation can be downloaded at [datas
 ## Requirements
 
 Please install required packages, using this command:
-
 ~~~
 pip install -r requirements.txt
 ~~~
@@ -21,6 +21,7 @@ pip install -r requirements.txt
 To examine the out-of-distribution detection result using pre-trained network, checkpoints should be stored as described above. Then, run commands:
 
 __Standard Network__
+
 ~~~
 # Standard DenseNet with CIFAR-10
 python std_ood_detector.py --nn dense-100 --tr_dset cifar10
@@ -42,6 +43,7 @@ python std_ood_detector.py --nn wrn-28-10 --tr_dset cifar100
 ~~~
 
 __Scaled Cosine Network__
+
 ~~~
 # Scaled Cosine DenseNet with CIFAR-10
 python cosine_ood_detector.py --nn dense-100 --tr_dset cifar10
@@ -64,4 +66,4 @@ python cosine_ood_detector.py --nn wrn-28-10 --tr_dset cifar100
 
 ### 2. Training from scratch
 
-Network can also be trained from scratch. 
+To re-confirm the out-of-distribution detection performance, network can also be trained from scratch. To do so, one needs to remove checkpoint files of that specific task, e.g. running scaled cosine DenseNet with CIFAR-10 from scratch requires *./ckpt/cos/dense-100/cifar10/* to be empty, no any checkpoint exists in the directory.
