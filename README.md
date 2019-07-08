@@ -7,7 +7,7 @@ This repository is an [PyTorch](https://pytorch.org/) implementation for to pape
 
 If you find this work useful in your research, please cite:
 ~~~
-@article{mandelbaum2017distance,
+@article{techapanurak2019cosine,
   title={Hyperparameter-free out-of-Distribution detection using softmax of scaled cosine similarity},
   author={Techapanurak, Engkarat and Okatani, Takayuki},
   journal={arXiv:1905.10628},
