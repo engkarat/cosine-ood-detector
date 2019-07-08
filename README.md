@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ~~~
 
 Other requirements:
-- GPU: at least 1 gpu
+- GPU: 1 unit
 - Python version: 2.7.15
 
 ## Running the code
