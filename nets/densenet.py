@@ -73,9 +73,9 @@ class DenseNet(nn.Module):
     ):
         super(DenseNet, self).__init__()
         in_planes = 2 * growth_rate
-        n = (depth - 4) / 3
+        n = int((depth - 4) / 3)
         if bottleneck == True:
-            n = n/2
+            n = int(n/2)
             block = BottleneckBlock
         else:
             block = BasicBlock

@@ -1,5 +1,5 @@
-from densenet import DenseNet
-from wide_resnet import WideResNet
+from nets.densenet import DenseNet
+from nets.wide_resnet import WideResNet
 import numpy as np
 import torch
 import torch.nn as nn

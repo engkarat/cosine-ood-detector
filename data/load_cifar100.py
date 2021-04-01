@@ -8,7 +8,10 @@ sys.path.append(project_path)
 
 def unpickle(file):
     with open(file, 'rb') as fo:
-        dict = pickle.load(fo)
+        if sys.version_info.major == 2:
+            dict = pickle.load(fo)
+        elif sys.version_info.major == 3:
+            dict = pickle.load(fo, encoding='latin-1')
     return dict
 
 

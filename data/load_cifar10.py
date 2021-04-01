@@ -12,10 +12,14 @@ test_file_names = ['test_batch', ]
 
 
 def read_img(file_path):
-    data = pickle.load(open(file_path, 'rb'))
-    x = np.dstack((data[b'data'][:, :1024], data[b'data'][:, 1024:2048], data[b'data'][:, 2048:])) / 255.
+    if sys.version_info.major == 2:
+        data = pickle.load(open(file_path, 'rb'))
+    elif sys.version_info.major == 3:
+        data = pickle.load(open(file_path, 'rb'), encoding='latin-1')
+    
+    x = np.dstack((data['data'][:, :1024], data['data'][:, 1024:2048], data['data'][:, 2048:])) / 255.
     x = x.reshape([-1, 32, 32, 3])
-    y = data[b'labels']
+    y = data['labels']
     return x, y
 
 
