@@ -18,7 +18,7 @@ If you find this work useful in your research, please cite:
 
 ## Datasets and Checkpoints
 
-Datasets and checkpoints used in this implementation can be downloaded at [datasets](https://drive.google.com/open?id=1DzeB5aT1BE4pSmm1nHolbnIx1PR4ZvXx) and [checkpoints](https://drive.google.com/open?id=12N33RP8G9CWrtAzBFocOZueRqbcMCD3F). For datasets, please extract and store all of them below *'data'* directory. For checkpoint, please put them below *'ckpt'* directory.
+Datasets and checkpoints used in this implementation can be downloaded at [datasets](https://drive.google.com/file/d/1A29oIx6ejACWerdCuLmFiG5Mr0KyuWHk/view?usp=sharing) and [checkpoints](https://drive.google.com/file/d/1GqHo7ZLVjUtytLjLFikn9OIbG6_Tpf4h/view?usp=sharing). For datasets, please extract and store all of them below *'data'* directory. For checkpoint, please put them below *'ckpt'* directory.
 
 ## Requirements
 
