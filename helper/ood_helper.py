@@ -36,32 +36,34 @@ def read_imgs_folder(im_dir):
 def get_ood_dataset_cifar(mean, std):
     # LSUN cropped
     print('Loading LSUN (c)')
-    lsun_cropped = read_imgs_folder('{}/data/ood_datset/LSUN/test/'.format(project_path))
+    lsun_cropped = read_imgs_folder('{}/data/ood_dataset/lsun_cropped_mod/test/'.format(project_path))
     lsun_cropped = lsun_cropped[:, 2: 34, 2: 34]
     lsun_cropped = std_mean_dataset_per_channel(lsun_cropped, mean, std)
     # LSUN resized
     print('Loading LSUN (r)')
-    lsun_resized = read_imgs_folder('{}/data/ood_datset/LSUN_resize/LSUN_resize/'.format(project_path))
+    lsun_resized = read_imgs_folder('{}/data/ood_dataset/lsun_resized/test/'.format(project_path))
     lsun_resized = std_mean_dataset_per_channel(lsun_resized, mean, std)
     # Tiny ImageNet Cropped
     print('Loading TinyImNet (c)')
-    imnet_cropped = read_imgs_folder('{}/data/ood_datset/Imagenet/test/'.format(project_path))
+    imnet_cropped = read_imgs_folder('{}/data/ood_dataset/imnet_cropped_mod/test/'.format(project_path))
     imnet_cropped = imnet_cropped[:, 2: 34, 2: 34]
     imnet_cropped = std_mean_dataset_per_channel(imnet_cropped, mean, std)
     # Tiny ImageNet Resized
     print('Loading TinyImNet (r)')
-    imnet_resized = read_imgs_folder('{}/data/ood_datset/Imagenet_resize/Imagenet_resize/'.format(project_path))
+    imnet_resized = read_imgs_folder('{}/data/ood_dataset/imnet_resized/test/'.format(project_path))
     imnet_resized = std_mean_dataset_per_channel(imnet_resized, mean, std)
     # iSUN
     print('Loading iSUN')
-    isun = read_imgs_folder('{}/data/ood_datset/iSUN/iSUN_patches/'.format(project_path))
+    isun = read_imgs_folder('{}/data/ood_dataset/isun/test/'.format(project_path))
     isun = std_mean_dataset_per_channel(isun, mean, std)
     # SVHN
     print('Loading SVHN')
-    svhn = loadmat('{}/data/ood_datset/svhn/test_32x32.mat'.format(project_path))
-    svhn = svhn['X'].transpose([3, 0, 1, 2]) / 255.
-    np.random.seed(555)
-    svhn = (svhn - mean) / std
+    # svhn = loadmat('{}/data/ood_dataset/svhn/test_32x32.mat'.format(project_path))
+    # svhn = svhn['X'].transpose([3, 0, 1, 2]) / 255.
+    # np.random.seed(555)
+    # svhn = (svhn - mean) / std
+    svhn = read_imgs_folder('{}/data/ood_dataset/svhn/test/'.format(project_path))
+    svhn = std_mean_dataset_per_channel(svhn, mean, std)
     # Gaussian Noise
     np.random.seed(555)
     print('Loading Gaussian Noise')
