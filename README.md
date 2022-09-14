@@ -18,7 +18,7 @@ If you find this work useful in your research, please cite:
 
 ## Datasets and Checkpoints
 
-Datasets and checkpoints used in this implementation can be downloaded at [datasets](https://drive.google.com/file/d/1eTtBQBUi6wQWzJrixOk2wcq15o2tN7P7/view?usp=sharing) and [checkpoints](https://drive.google.com/file/d/1GqHo7ZLVjUtytLjLFikn9OIbG6_Tpf4h/view?usp=sharing). For datasets, please extract and store all of them below *'data'* directory. For checkpoint, please put them below *'ckpt'* directory.
+Datasets and checkpoints used in this implementation can be downloaded at [datasets](https://drive.google.com/file/d/1eTtBQBUi6wQWzJrixOk2wcq15o2tN7P7/view?usp=sharing) and [checkpoints](https://drive.google.com/file/d/1KgBniS17mpw_-oKDisEAEp4bIL0GT0BO/view?usp=sharing). For datasets, please extract and store them below *'data'* directory such that *'./data/ood_dataset/'* exists. For checkpoint, please put them below *'ckpt'* directory such that *'./ckpt/std/'* and *'./ckpt/cos/'* exist.
 
 ## Requirements
 
